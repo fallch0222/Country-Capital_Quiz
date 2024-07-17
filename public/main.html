@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수도 맞추기 게임</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>수도 맞히기 게임</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>수도 맞추기 게임</h1>
+        <div class="info-container">
+            <button id="startButton" style="display:none;">시작하기</button>
+            <p id="score">점수: 0</p>
+            <div id="timer">타이머: 60초</div>
+        </div>
+        <h1>수도 맞히기 게임</h1>
         <div id="question-container">
             <p id="country-name">나라 이름</p>
-            <input type="text" id="capital-input" placeholder="수도를 입력하세요">
+            <input type="text" id="capital-input" placeholder="수도를 입력하세요" onkeyup="enterkey(); ">
             <button id="submit-btn">제출</button>
         </div>
         <div id="result-container">
             <p id="result-message"></p>
-            <button id="next-btn">다음</button>
         </div>
     </div>
     <script src="script.js"></script>
